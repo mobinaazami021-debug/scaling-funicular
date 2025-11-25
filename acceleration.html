@@ -1,49 +1,35 @@
-<!doctype html>
-<html lang="fa" dir="rtl">
+<!DOCTYPE html>
+<html lang="fa">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>شتاب — آزمایشگاه حرکت</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>آزمایشگاه فیزیک – حرکت</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="page-header">
-  <a class="back" href="index.html">⟵ بازگشت</a>
-  <h1>شتاب</h1>
+
+<header>
+    <h1>آزمایشگاه فیزیک – حرکت</h1>
 </header>
 
-<main class="card single">
-  <h2>تعریف</h2>
-  <p>شتاب متوسط یک متحرک نسبتِ تغییر سرعت متحرک به زمان صرف شده است.</p>
-  <p>برای محاسبهٔ شتاب متوسط دو چیز را باید بدانیم:</p>
-  <ol>
-    <li>تغییرات سرعت (برداری؛ اندازه و جهت)</li>
-    <li>مدت زمان تغییر سرعت (Δt)</li>
-  </ol>
+<nav>
+    <button data-page="intro">تعریف حرکت</button>
+    <button data-page="distance">مسافت و جابه‌جایی</button>
+    <button data-page="speed">تندی و سرعت</button>
+    <button data-page="avg-speed">تندی متوسط</button>
+</nav>
 
-  <h3>یکا</h3>
-  <p>یکای شتاب از تقسیم یکای سرعت بر یکای زمان به دست می‌آید: <strong>متر بر مربع ثانیه (m/s²)</strong></p>
-
-  <h3>فرمول</h3>
-  <p><code>a_{avg} = \dfrac{\Delta v}{\Delta t}</code></p>
-
-  <h3>معادلات حرکت (شتاب ثابت)</h3>
-  <ul>
-    <li><code>v = v_0 + a t</code></li>
-    <li><code>s = v_0 t + \tfrac{1}{2} a t^2</code></li>
-    <li><code>v^2 = v_0^2 + 2 a s</code></li>
-  </ul>
-
-  <h3>مثال تعاملی — راکت</h3>
-  <div class="stage" id="rocket-stage"></div>
-  <div class="controls">
-    <label>شتاب (m/s²): <input id="acc-slider" type="range" min="0.2" max="3" step="0.1" value="0.6"></label>
-    <button id="acc-start" class="btn">شروع</button>
-    <button id="acc-stop" class="btn ghost">توقف</button>
-  </div>
-
+<main id="content">
+    <!-- محتوا از main.js لود می‌شود -->
 </main>
 
-<script src="scripts.js"></script>
+<!-- دکمه پرسش از هوش مصنوعی -->
+<div id="ai-box">
+    <h3>سوال داری؟ از هوش مصنوعی بپرس!</h3>
+    <textarea id="ai-question" placeholder="سوالت را درباره حرکت بنویس..."></textarea>
+    <button id="askAI">پرسش</button>
+    <div id="ai-answer"></div>
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>
